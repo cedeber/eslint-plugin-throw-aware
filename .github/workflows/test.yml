@@ -27,7 +27,9 @@ jobs:
           - 20
           - 18
         os:
+          - macos-latest
           - ubuntu-latest
+          - windows-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
