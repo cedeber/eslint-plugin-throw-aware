@@ -1,12 +1,12 @@
 import test from "ava";
 import AvaRuleTester from "eslint-ava-rule-tester";
-import rule from "../rules/throw-documentation.mjs";
+import rule from "../lib/rules/require-throws-doc.mjs";
 
 const ruleTester = new AvaRuleTester(test, {
   languageOptions: { ecmaVersion: 2021, sourceType: "module" },
 });
 
-ruleTester.run("throw-documentation", rule, {
+ruleTester.run("require-throws-doc", rule, {
   /** @type {import("eslint").RuleTester.ValidTestCase[]} */
   valid: [
     // Function Declaration

@@ -1,6 +1,6 @@
 import test from "ava";
 import AvaRuleTester from "eslint-ava-rule-tester";
-import rule from "../rules/throw-naming.mjs";
+import rule from "../lib/rules/throw-function-naming.mjs";
 
 const ruleTester = new AvaRuleTester(test, {
   languageOptions: { ecmaVersion: 2021, sourceType: "module" },
