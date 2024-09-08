@@ -6,4 +6,9 @@ export default [
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   pluginThrowAware.configs.recommended,
+  {
+    rules: {
+      "throw-aware/throw-function-naming": ["warn", { suffix: "WithError" }]
+    }
+  }
 ];
