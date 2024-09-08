@@ -1,6 +1,6 @@
 {
-  "name": "eslint-plugin-throw",
-  "version": "1.0.0-beta.3",
+  "name": "eslint-plugin-throw-aware",
+  "version": "1.0.0-beta.1",
   "description": "An ESLint plugin to enforce naming conventions and JSDoc annotations for functions that throw exceptions.",
   "type": "module",
   "main": "lib/index.mjs",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cedeber/eslint-plugin-throw.git"
+    "url": "git+https://github.com/cedeber/eslint-plugin-throw-aware.git"
   },
   "keywords": [
     "eslint",
@@ -19,9 +19,9 @@
   "author": "Cédric Eberhardt <hello+code@cedeber.fr>",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/cedeber/eslint-plugin-throw/issues"
+    "url": "https://github.com/cedeber/eslint-plugin-throw-aware/issues"
   },
-  "homepage": "https://github.com/cedeber/eslint-plugin-throw#readme",
+  "homepage": "https://github.com/cedeber/eslint-plugin-throw-aware#readme",
   "peerDependencies": {
     "eslint": ">=9.0.0"
   },
