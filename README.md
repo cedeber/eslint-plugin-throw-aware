@@ -11,8 +11,8 @@ A plugin for ESLint to enforce naming conventions and JSDoc annotations for func
 
 - Support `@throws` but without a type. Optional.
 - Check if a `@throws` tag is set, but not required.
+- Support of anonymous functions
 - Support of async function
-- Function Naming
 
 ## Installation
 
@@ -45,6 +45,7 @@ You can customize the behavior of this plugin by adjusting the rule settings:
   plugins: {
     "throw-aware": pluginThrowAware
   },
+  // Recommended configuration
   rules: {
     "throw-aware/throw-function-naming": ["error", { suffix: "OrThrow" }],
     "throw-aware/require-throws-doc": ["warn"]
