@@ -1,0 +1,16 @@
+{
+  "name": "throw-aware-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": { 
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+   },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-throw-aware": "file:..",
+    "globals": "^15.9.0"
+  }
+}
