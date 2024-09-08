@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-throw-aware",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "An ESLint plugin to enforce naming conventions and JSDoc annotations for functions that throw exceptions.",
   "type": "module",
   "main": "lib/index.mjs",
