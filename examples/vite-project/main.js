@@ -11,7 +11,18 @@ function test2() {
 
 const test3 = () => {
   try {
+    console.log("Test");
+  } catch {
     throw new Error("Test error");
+  }
+};
+
+/**
+ * @throws {Error}
+ */
+const test4 = () => {
+  try {
+    console.log("Test");
   } finally {
     throw new Error("Test error");
   }
