@@ -26,6 +26,11 @@ ruleTester.run("throw-function-naming", rule, {
       }
       `,
       errors: [{ messageId: "missingSuffix", data: { name: "test", suffix: "OrThrow" } }],
+      output: `
+      function testOrThrow() {
+        throw new Error('test');
+      }
+      `,
     },
     {
       code: `
@@ -35,6 +40,11 @@ ruleTester.run("throw-function-naming", rule, {
       `,
       options: [{ suffix: "MayFail" }],
       errors: [{ messageId: "missingSuffix", data: { name: "test", suffix: "MayFail" } }],
+      output: `
+      function testMayFail() {
+        throw new Error('test');
+      }
+      `,
     },
   ],
 });
