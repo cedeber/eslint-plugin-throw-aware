@@ -1,10 +1,12 @@
 /**
  *
  */
-function quux1(foo) {
+export function quux1(foo) {
   throw new Error("err");
 }
 // Message: Missing JSDoc @throws declaration.
+
+quux1();
 
 /**
  *
