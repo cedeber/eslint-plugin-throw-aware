@@ -7,6 +7,13 @@ A plugin for ESLint to enforce naming conventions and JSDoc annotations for func
 - **Function Naming**: Enforces a naming convention for functions that can throw, e.g., `functionNameOrThrow()`.
 - **JSDoc Enforcement**: Requires JSDoc `@throws` tags for functions that throw errors.
 
+### Not implemented yet
+
+- Support `@throws` but without a type. Optional.
+- Check if a `@throws` tag is set, but not required.
+- Support of async function
+- Function Naming
+
 ## Installation
 
 ```sh
