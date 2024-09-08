@@ -1,4 +1,5 @@
 .vscode
 .github
 /lib/tests
+/examples
 eslint.config.js
