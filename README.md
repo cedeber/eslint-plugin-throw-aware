@@ -29,7 +29,9 @@ export default [
 ];
 ```
 
-### Add plugin and rules
+### Configuration
+
+You can customize the behavior of this plugin by adjusting the rule settings:
 
 ```js
 {
@@ -37,11 +39,13 @@ export default [
     "throw-aware": pluginThrowAware
   },
   rules: {
-    "throw-aware/throw-function-naming": "error",
-    "throw-aware/require-throws-doc": "error"
+    "throw-aware/throw-function-naming": ["error", { suffix: "OrThrow" }],
+    "throw-aware/require-throws-doc": ["warn"]
   }
 }
 ```
+
+- **suffix**: Customizes the expected suffix for function names. Default is `OrThrow`.
 
 ## Rules
 
@@ -91,21 +95,6 @@ function fetchUserDataOrThrow() {
   if (!userData) throw new Error("User data not found");
 }
 ```
-
-## Configuration
-
-You can customize the behavior of this plugin by adjusting the rule settings:
-
-```js
-{
-  rules: {
-    "throw-aware/throw-function-naming": ["error", { suffix: "OrThrow" }],
-    "throw-aware/require-throws-doc": ["warn"]
-  }
-}
-```
-
-- **suffix**: Customizes the expected suffix for function names. Default is `OrThrow`.
 
 ## Why Use This Plugin?
 
