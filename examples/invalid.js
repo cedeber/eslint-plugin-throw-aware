@@ -1,5 +1,6 @@
 /**
- *
+ * @param {string} foo
+ * @returns {string}
  */
 export function quux1(foo) {
   throw new Error("err");
@@ -8,9 +9,7 @@ export function quux1(foo) {
 
 quux1();
 
-/**
- *
- */
+/** @param {string} foo */
 const quux2 = function (foo) {
   throw new Error("err");
 };
@@ -24,9 +23,6 @@ const quux3 = (foo) => {
 };
 // Message: Missing JSDoc @throws declaration.
 
-/**
- *
- */
 function quux4(foo) {
   while (true) {
     throw new Error("err");

@@ -100,6 +100,14 @@ ruleTester.run("require-throws-doc", rule, {
       }
       `,
       errors: [{ messageId: "missingThrows", data: { type: "Error" } }],
+      output: `
+      /**
+       * @throws {Error}
+       */
+      function test() {
+        throw new Error('test');
+      }
+      `,
     },
     {
       code: `
@@ -111,6 +119,15 @@ ruleTester.run("require-throws-doc", rule, {
       }
       `,
       errors: [{ messageId: "missingThrows", data: { type: "Error" } }],
+      output: `
+      /**
+       * This function throws an error
+       * @throws {Error}
+       */
+      function test() {
+        throw new Error('test');
+      }
+      `,
     },
     {
       code: `
@@ -119,6 +136,14 @@ ruleTester.run("require-throws-doc", rule, {
       }
       `,
       errors: [{ messageId: "missingThrows", data: { type: "Error" } }],
+      output: `
+      /**
+       * @throws {Error}
+       */
+      const test = () => {
+        throw new Error('test');
+      }
+      `,
     },
     {
       code: `
@@ -131,6 +156,18 @@ ruleTester.run("require-throws-doc", rule, {
       }
       `,
       errors: [{ messageId: "missingThrows", data: { type: "Error" } }],
+      output: `
+      /**
+       * @throws {Error}
+       */
+      const test = () => {
+        try {
+          console.log('test');
+        } catch {
+          throw new Error("Test error");
+        }
+      }
+      `,
     },
     {
       code: `
@@ -143,6 +180,18 @@ ruleTester.run("require-throws-doc", rule, {
       }
       `,
       errors: [{ messageId: "missingThrows", data: { type: "Error" } }],
+      output: `
+      /**
+       * @throws {Error}
+       */
+      const test = () => {
+        try {
+          console.log('test');
+        } finally {
+          throw new Error("Test error");
+        }
+      }
+      `,
     },
     {
       code: `
@@ -154,6 +203,15 @@ ruleTester.run("require-throws-doc", rule, {
       }
       `,
       errors: [{ messageId: "missingThrows", data: { type: "Error" } }],
+      output: `
+      /**
+       * This function throws an error
+       * @throws {Error}
+       */
+      const test = () => {
+        throw new Error('test');
+      }
+      `,
     },
     {
       code: `
