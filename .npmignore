@@ -3,3 +3,4 @@
 /examples
 /tests
 eslint.config.js
+prettier.config.js
