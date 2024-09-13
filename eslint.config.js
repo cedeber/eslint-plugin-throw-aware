@@ -2,6 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import eslintPlugin from "eslint-plugin-eslint-plugin";
 import nodePlugin from "eslint-plugin-n";
+import avaPlugin from "eslint-plugin-ava";
 
 /** @type import("eslint").Linter.Config[] */
 export default [
@@ -15,8 +16,10 @@ export default [
       "n/exports-style": ["error", "module.exports"],
     },
   },
+  { languageOptions: { ecmaVersion: 2020, sourceType: "module" } },
   {
-    languageOptions: { ecmaVersion: 2021, sourceType: "module" },
-    ignores: ["/examples"],
+    files: ["tests/*.js"],
+    ...avaPlugin.configs["flat/recommended"],
   },
+  { ignores: ["node_modules", "cjs", "examples"] },
 ];

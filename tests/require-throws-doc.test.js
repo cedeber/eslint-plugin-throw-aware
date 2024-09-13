@@ -1,9 +1,9 @@
 import test from "ava";
 import AvaRuleTester from "eslint-ava-rule-tester";
-import rule from "../lib/rules/require-throws-doc.mjs";
+import rule from "../lib/rules/require-throws-doc.js";
 
 const ruleTester = new AvaRuleTester(test, {
-  languageOptions: { ecmaVersion: 2021, sourceType: "module" },
+  languageOptions: { ecmaVersion: 2020, sourceType: "module" },
 });
 
 ruleTester.run("require-throws-doc", rule, {
